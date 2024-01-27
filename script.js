@@ -21,3 +21,13 @@ let usedLetters;
 let mistakes;
 let hits;
 
+const startGame = () => {
+    usedLetters = [];
+    mistakes = 0;
+    hits = 0;
+    wordContainer.innerHTML = '';
+    usedLettersElement.innerHTML = '';
+    startButton.style.display = 'none';
+}
+
+startButton.addEventListener('click', startGame);
