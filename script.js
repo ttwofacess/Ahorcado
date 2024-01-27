@@ -21,6 +21,11 @@ let usedLetters;
 let mistakes;
 let hits;
 
+const selectRandomWord = () => {
+    let word = words[Math.floor((Math.random() * words.length))].toUpperCase();
+    selectedWord = word.split('');
+}
+
 const drawHangMan = () => {
     ctx.canvas.width = 120;
     ctx.canvas.height = 160;
@@ -41,6 +46,7 @@ const startGame = () => {
     usedLettersElement.innerHTML = '';
     startButton.style.display = 'none';
     drawHangMan();
+    selectRandomWord();
 }
 
 startButton.addEventListener('click', startGame);
