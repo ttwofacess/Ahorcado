@@ -21,7 +21,11 @@ let usedLetters;
 let mistakes;
 let hits;
 
-
+const letterInput = letter => {
+    if(selectedWord.includes(letter)) {
+        correctLetter(letter);
+    }
+}
 
 const letterEvent = event => {
     let newLetter = event.key.toUpperCase();
