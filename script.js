@@ -21,6 +21,10 @@ let usedLetters;
 let mistakes;
 let hits;
 
+const correctLetter = letter => {
+    const { children } = wordContainer;
+}
+
 const letterInput = letter => {
     if(selectedWord.includes(letter)) {
         correctLetter(letter);
