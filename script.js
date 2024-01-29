@@ -21,6 +21,10 @@ let usedLetters;
 let mistakes;
 let hits;
 
+const wrongLetter = () => {
+    addBodyPart(bodyParts[mistakes]);
+}
+
 const endGame = () => {
     document.removeEventListener('keydown', letterEvent);
     startButton.style.display = 'block';
@@ -40,6 +44,8 @@ const correctLetter = letter => {
 const letterInput = letter => {
     if(selectedWord.includes(letter)) {
         correctLetter(letter);
+    } else {
+        wrongLetter();
     }
 }
 
