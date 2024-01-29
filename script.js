@@ -25,6 +25,11 @@ const wrongLetter = () => {
     addBodyPart(bodyParts[mistakes]);
 }
 
+const addBodyPart = bodyPart => {
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(...bodyPart);
+}
+
 const endGame = () => {
     document.removeEventListener('keydown', letterEvent);
     startButton.style.display = 'block';
