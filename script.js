@@ -21,13 +21,15 @@ let usedLetters;
 let mistakes;
 let hits;
 
-const wrongLetter = () => {
-    addBodyPart(bodyParts[mistakes]);
-}
-
 const addBodyPart = bodyPart => {
     ctx.fillStyle = '#fff';
     ctx.fillRect(...bodyPart);
+}
+
+const wrongLetter = () => {
+    addBodyPart(bodyParts[mistakes]);
+    mistakes++;
+    if(mistakes === bodyParts.length) endGame();
 }
 
 const endGame = () => {
