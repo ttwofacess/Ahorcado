@@ -21,6 +21,12 @@ let usedLetters;
 let mistakes;
 let hits;
 
+const addLetter = letter => {
+    const letterElement = document.createElement('span');
+    letterElement.innerHTML = letter.toUpperCase();
+    usedLettersElement.appendChild(letterElement);
+}
+
 const addBodyPart = bodyPart => {
     ctx.fillStyle = '#fff';
     ctx.fillRect(...bodyPart);
@@ -54,6 +60,7 @@ const letterInput = letter => {
     } else {
         wrongLetter();
     }
+    addLetter(letter);
 }
 
 const letterEvent = event => {
