@@ -61,6 +61,7 @@ const letterInput = letter => {
         wrongLetter();
     }
     addLetter(letter);
+    usedLetters.push(letter);
 }
 
 const letterEvent = event => {
