@@ -68,9 +68,6 @@ const letterEvent = event => {
     let newLetter = event.key.toUpperCase();
     if(newLetter.match(/^[a-zñ]$/i) && !usedLetters.includes(newLetter)) {
         letterInput(newLetter);
-        /* usedLetters.push(newLetter);
-        updateUsedLetters();
-        checkLetter(newLetter); */
     }
 }
 
